@@ -18,5 +18,18 @@ public class SimpleArray {
         System.out.println("arrIntLit[3] = "+result);
         System.out.println(arrIntLit[6]); // берем элемент с индексом 6
 
+        //копирование массива
+        int[] arrIntLitCopy = arrIntLit; // копирование ссылки
+        arrIntLitCopy[2] = 11;
+        System.out.println(Arrays.toString(arrIntLitCopy));
+        System.out.println(Arrays.toString(arrIntLit));
+
+        int[] arrIntLitClone = arrIntLit.clone(); //клонирование объекта
+        arrIntLitClone[2] = 33;
+        System.out.println(Arrays.toString(arrIntLitClone));
+        System.out.println(Arrays.toString(arrIntLit));
+
+
+
     }
 }
