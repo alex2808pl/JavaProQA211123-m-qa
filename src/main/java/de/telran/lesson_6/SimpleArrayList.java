@@ -1,9 +1,9 @@
-package de.telran;
+package de.telran.lesson_6;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class lesson_6 {
+public class SimpleArrayList {
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>();
