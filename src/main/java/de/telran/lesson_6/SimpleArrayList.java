@@ -40,5 +40,37 @@ public class SimpleArrayList {
         list.removeAll(list2); // сравнивает значение каждого элемента подмассива и удаляет все встречающие
         System.out.println(list);
 
+        // Получить данные
+        System.out.println(list.get(1));
+        System.out.println(list.getFirst());
+        System.out.println(list.getLast());
+
+        // Перебор данных в коллекции с получением элементов
+
+
+        // вывод в прямом порядке
+        for (int i = 0; i < list.size(); i++) { //по индексу
+            System.out.print(list.get(i)+",");
+        }
+        System.out.println();
+
+        // вывод в обратном порядке
+        for (int i = list.size()-1; i >= 0; i--) { //по индексу
+            System.out.print(list.get(i)+",");
+        }
+        System.out.println();
+
+        // вывод в прямом порядке
+        for(Integer el : list) { // c помощью Iterator
+            System.out.print(el+",");
+        }
+        System.out.println();
+
+        //поиск
+        System.out.println(list.contains(Integer.valueOf(20)));
+        System.out.println(list.contains(Integer.valueOf(11)));
+        System.out.println(list.containsAll(List.of(20,30)));
+        System.out.println(list.containsAll(List.of(10,30))); // логика работает по &&
+        System.out.println(list.containsAll(List.of(10,55))); // логика работает по &&
     }
 }
