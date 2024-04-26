@@ -1,4 +1,4 @@
-1. Создать объекты TreeSet<Integer>, HashSet<Integer> и LinkedList<Integer>.
+1. Создать объекты TreeSet<Integer>, HashSet<Integer> и LinkedHashSet<Integer>.
 Просчитать время работы с большим количеством элементов (например 1_000_000) для каждого объекта по операциям:
 - добавление - add(значение)
 - удаление  - remove(значение)
