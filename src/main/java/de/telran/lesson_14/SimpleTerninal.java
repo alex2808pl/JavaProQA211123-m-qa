@@ -270,6 +270,6 @@ public class SimpleTerninal {
                         .collect(groupingBy(Person::getName,
                                 mapping(Person::getAge, toList())));
 
-        System.out.println("Mapping result - " + resultMapInt1);
+        System.err.println("Mapping result - " + resultMapInt1);
     }
 }
