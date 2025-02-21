@@ -9,22 +9,27 @@ import java.util.Locale;
 public class DateSimple {
     public static void main(String[] args) {
         Date date1 = new Date();
-        System.out.println("Current date -> "+date1);
+        System.out.println("Current date1 -> "+date1);
 
         Date date2 = new Date(3243544346643L);
-        System.out.println("User date -> "+date2);
+        System.out.println("User date2 -> "+date2);
+
+        Date date33 = new Date(Long.MAX_VALUE);
+        System.out.println("Max date33 -> "+date33);
 
         System.out.println("date1 > date2 = "+date1.after(date2));
         System.out.println("date1 < date2 = "+date1.before(date2));
 
-        System.out.println("Count mls = "+ date1.getTime());
+        System.out.println("Count date1 mls = "+ date1.getTime());
+        date1.setTime(111111111111L); //установим новое время
+        System.out.println("Set count date1 mls = "+ date1);
 
         // Работа с локалью
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
 
         Date date3 = new Date();
-        System.out.println("Current date ru -> "+date3);
+        System.out.println("Current date (default) -> "+date3);
         String dateString = String.format(locale, "%tc\n", date3);
         System.out.println("String date ru -> "+dateString);
 
@@ -33,7 +38,8 @@ public class DateSimple {
         System.out.println("Current calendar = "+calendar1);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        System.out.println(simpleDateFormat.format(calendar1.getTime()));
+        System.out.println("Calendar - "+simpleDateFormat.format(calendar1.getTime())); // работа с Calendar
+        System.out.println("Date - "+simpleDateFormat.format(new Date())); // работа с Date
         simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println(simpleDateFormat.format(calendar1.getTime()));
 
@@ -49,6 +55,10 @@ public class DateSimple {
 
         calendar2 = new GregorianCalendar(1979, Calendar.FEBRUARY, 22, 11, 33, 44);
         System.out.println(simpleDateFormat.format(calendar2.getTime()));
+
+        // для работы с БД Sql, не путать с основным java.util.Date;
+        java.sql.Date dtSql = new java.sql.Date(3243544346643L);
+        System.out.println("dtSql = "+dtSql);
 
     }
 }

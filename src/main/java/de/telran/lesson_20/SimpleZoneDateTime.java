@@ -21,6 +21,8 @@ public class SimpleZoneDateTime {
         ZonedDateTime zdt4 = ZonedDateTime.now(zoneIdIndia);
         System.out.println("Current India = "+zdt4);
 
+        System.out.println("Count ZoneId = "+ZoneId.getAvailableZoneIds().stream().count());
         //ZoneId.getAvailableZoneIds().forEach(System.out::println);
+
     }
 }
