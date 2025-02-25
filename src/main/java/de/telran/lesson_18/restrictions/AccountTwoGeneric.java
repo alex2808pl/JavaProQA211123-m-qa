@@ -1,6 +1,6 @@
 package de.telran.lesson_18.restrictions;
 // U extends Number - я и мои наследники
-// U super Number - мои предки
+// U super Number - мои предки (не работает на уровне класса?)
 
 public class AccountTwoGeneric<T, U extends Number> {
     private T id;

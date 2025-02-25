@@ -6,7 +6,9 @@ public class AccountString implements Accountable<String>{
 
     @Override
     public String getId() {
-        return this.id;
+        if(this.id != null && this.id != "")
+            return this.id;
+        else return "Empty";
     }
 
     @Override

@@ -6,7 +6,9 @@ public class AccountInteger implements Accountable<Integer>{
 
     @Override
     public Integer getId() {
-        return this.id;
+        if(this.id > 0)
+            return this.id;
+        else return 0;
     }
 
     @Override

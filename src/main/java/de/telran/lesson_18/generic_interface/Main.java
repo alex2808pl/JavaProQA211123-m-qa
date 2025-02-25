@@ -6,6 +6,7 @@ public class Main {
         // стратегия создания Generic классов при имплементации Generic интерфейсов
         Accountable<String> accountable = new Account<>("DE12345", 1000);
         System.out.println(accountable.getSum());
+        // System.out.println(accountable.addSum(100)); // операция сужение, не видими этот метод
 
 
         Account<Integer> account = new Account<>(12345, 500);
